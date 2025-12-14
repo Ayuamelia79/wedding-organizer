@@ -1,6 +1,6 @@
 # Deskripsi Aplikasi Wedding Organizer
 
- Wedding organizer (WO) adalah jasa atau profesional yang membantu merencanakan, mengatur, dan mengelola acara pernikahan. Tugas mareka meliputi  berbagai hal,  mulai dari Menyusun anggaran, memilih vendor ,mengatur jadwal acara, hingga memastikan semuanya berjalan lancar pada hari H.
+ Wedding organizer (WO) adalah jasa atau profesional yang membantu merencanakan, mengatur, dan mengelola acara pernikahan. Tugas mereka meliputi  berbagai hal,  mulai dari Menyusun anggaran, memilih vendor ,mengatur jadwal acara, hingga memastikan semuanya berjalan lancar pada hari H.
 
 
 # Fitur Aplikasi
