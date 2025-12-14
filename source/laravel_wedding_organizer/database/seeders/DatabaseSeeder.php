@@ -15,16 +15,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Ensure an admin user exists with requested credentials and is verified
+        $adminEmail = 'admin@gmail.com';
+        $adminPassword = '12345678';
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        $admin = User::query()->where('email', $adminEmail)->first();
+        if (!$admin) {
+            $admin = User::factory()->create([
+                'name' => 'Admin',
+                'email' => $adminEmail,
+                'password' => \Illuminate\Support\Facades\Hash::make($adminPassword),
+                'role' => 'admin',
+                'email_verified_at' => now(),
+            ]);
+        } else {
+            $admin->forceFill([
+                'name' => 'Admin',
+                'role' => 'admin',
+                'password' => \Illuminate\Support\Facades\Hash::make($adminPassword),
+                'email_verified_at' => $admin->email_verified_at ?? now(),
+            ])->save();
+        }
 
         $this->call([
-    PengantinSeeder::class,
-]);
+            PengantinSeeder::class,
+        ]);
 
     }
 }

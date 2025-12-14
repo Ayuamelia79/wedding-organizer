@@ -10,11 +10,12 @@ class PengantinSeeder extends Seeder
     public function run(): void
     {
         DB::table('pengantins')->insert([
-            'nama' => 'Ayu Amelia',
-            'email' => 'ayu@example.com',
-            'password' => bcrypt('12345678'),
-            'alamat' => 'Kota Banda Aceh',
-            'no_hp' => '08123456789',
+            'nama_pria' => 'Rizki Fajar',
+            'nama_wanita' => 'Ayu Amelia',
+            'tanggal_nikah' => '2026-01-15',
+            'tempat' => 'Kota Banda Aceh',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }
